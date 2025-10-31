@@ -51,7 +51,12 @@ const Author = () => {
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio, similique
             porro alias ipsa culpa tempora quis. Minus magnam optio quas,
-            quae, veniam quidem ipsa alias, ratione autem excepturi praesentium.
+            quae, veniam quidem ipsa alias, ratione autem excepturi praesentium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio, similique
+            porro alias ipsa culpa tempora quis. Minus magnam optio quas,
+            quae, veniam quidem ipsa alias, ratione autem excepturi praesentium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio, similique
+            porro alias ipsa culpa tempora quis. Minus magnam optio quas,
+            quae, veniam quidem ipsa alias, ratione autem excepturi praesentium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio, similique
+            porro alias ipsa culpa tempora quis. Minus magnam optio quas,
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -60,6 +65,14 @@ const Author = () => {
             className="text-lg text-gray-700 leading-relaxed font-light mb-8"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio, similique
+            porro alias ipsa culpa tempora quis. Minus magnam optio quas,
+            quae, veniam quidem ipsa alias, ratione autem excepturi praesentium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio, similique
+            porro alias ipsa culpa tempora quis. Minus magnam optio quas,
+            quae, veniam quidem ipsa alias, ratione autem excepturi praesentium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio, similique
+            porro alias ipsa culpa tempora quis. Minus magnam optio quas,
+            quae, veniam quidem ipsa alias, ratione autem excepturi praesentium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio, similique
+            porro alias ipsa culpa tempora quis. Minus magnam optio quas,
+            quae, veniam quidem ipsa alias, ratione autem excepturi praesentium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio, similique
             porro alias ipsa culpa tempora quis. Minus magnam optio quas,
             quae, veniam quidem ipsa alias, ratione autem excepturi praesentium.
           </motion.p>

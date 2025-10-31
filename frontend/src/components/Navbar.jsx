@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="flex items-center gap-5 md:gap-10">
           <Link to="/" className="flex items-center gap-2">
             <MdOutlineMenuBook className="size-12" />
-            <span className="text-xl font-semibold "><i>Author</i></span>
+            <span className="text-xl font-semibold "><i>E-book Center</i></span>
           </Link>
 
           {/* Search Input */}

@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className='relative min-h-screen flex items-center justify-center overflow-hidden'
+      className='relative min-h-screen flex items-center justify-center overflow-hidden rounded-md'
       style={{
         backgroundImage: `url(${abstractBg})`,
         backgroundSize: 'cover',

@@ -1,75 +1,61 @@
-import React, { useEffect, useState } from 'react'
-
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import required modules
 import { Navigation, Pagination } from 'swiper/modules';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import BookCard from '../books/BookCard';
 
 const Recommended = () => {
+  const [books, setBooks] = useState([]);
 
-    const [books, setBooks] = useState([]);
+  useEffect(() => {
+    fetch('/books.json')
+      .then(res => res.json())
+      .then((data) => setBooks(data));
+  }, []);
 
-    useEffect(() => {
-        fetch("../public/books.json")
-            .then(res => res.json())
-            .then((data) => setBooks(data))
-    },
-        []
-    )
+  return (
+    <section className="w-full bg-gradient-to-br from-white via-gray-50 to-gray-100 py-20">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center tracking-wide">
+          A Look at some of  <span className="text-indigo-600">My Work</span>
+        </h2>
 
-    return (
-        <section className='bg-gray-100 w-full'>
-            <div className='py-16'>
-                <h2 className='text-3xl font-semibold mb-6'>Recommended For You</h2>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          navigation={true}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          }}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {books.length > 0 &&
+            books.slice(1, 5).map((book, index) => (
+              <SwiperSlide key={index}>
+                <div className="transition-transform transform hover:-translate-y-1 hover:shadow-xl duration-300">
+                  <BookCard book={book} />
+                </div>
+              </SwiperSlide>
+            ))}
+        </Swiper>
+      </div>
+    </section>
+  );
+};
 
-                <Swiper
-                    slidesPerView={1}
-                    spaceBetween={30}
-                    navigation={true}
-                    breakpoints={{
-                        640: {
-                            slidesPerView: 1,
-                            spaceBetween: 20,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 40,
-                        },
-                        1024: {
-                            slidesPerView: 2,
-                            spaceBetween: 50,
-                        },
-                        1180: {
-                            slidesPerView: 3,
-                            spaceBetween: 50,
-                        }
-                    }}
-                    modules={[Pagination, Navigation]}
-                    className="mySwiper"
-                >
-                    {
-
-books.length > 0 && books.slice(10, 20).map((book, index) => (
-                            <SwiperSlide key={index}>
-                                <BookCard key={index} book={book} />
-
-                            </SwiperSlide>
-                        ))
-                    }
-
-
-                </Swiper>
-
-
-            </div>
-        </section>
-    )
-}
-
-export default Recommended
+export default Recommended;

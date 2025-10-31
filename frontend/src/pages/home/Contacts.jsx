@@ -22,13 +22,11 @@ const Contacts = () => {
     }
   };
 
-  // Animation variants for sections
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   };
 
-  // Animation variants for form fields
   const fieldVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: 'easeOut' } },
@@ -72,7 +70,7 @@ const Contacts = () => {
               <div>
                 <h3 className="font-semibold text-lg">Email Me</h3>
                 <a href="mailto:author@example.com" className="text-blue-600 hover:underline">
-                  author@example.com
+                  mutindahcaleb@gmail.com
                 </a>
               </div>
             </div>
@@ -82,7 +80,7 @@ const Contacts = () => {
               <div>
                 <h3 className="font-semibold text-lg">Call Me (Optional)</h3>
                 <a href="tel:+1234567890" className="text-purple-600 hover:underline">
-                  +1 (234) 567-890
+                  0795 331-515
                 </a>
               </div>
             </div>

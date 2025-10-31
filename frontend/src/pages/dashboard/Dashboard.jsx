@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { HiOutlineBookOpen, HiOutlinePlusSm, HiOutlineCog, HiOutlineLogout } from "react-icons/hi"; // More elegant icons
-import { BiBookContent } from "react-icons/bi"; // Specific icon for managing books
+import { BiBookContent } from "react-icons/bi"; 
 
 const DashboardLayout = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const DashboardLayout = () => {
         <div className="flex items-center justify-center h-20 px-4 mb-8">
           <Link to="/" className="inline-flex items-center text-white text-3xl font-bold tracking-tight">
             {/* You can replace this with your actual book/author logo */}
-            <span className="text-purple-400">Auth</span>or
+            <span className="text-red-400">Book</span> <br></br>Shelf
           </Link>
         </div>
 
@@ -98,11 +98,11 @@ const DashboardLayout = () => {
           <div className="flex items-center ml-auto space-x-4">
             <button className="inline-flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg group">
               <div className="hidden md:flex md:flex-col md:items-end md:leading-tight mr-3">
-                <span className="font-semibold text-sm">Grace Simmons</span>
-                <span className="text-xs text-gray-500">Author Admin</span> {/* More relevant role */}
+                <span className="font-semibold text-sm">Admin</span>
+                <span className="text-xs text-gray-500">Author Admin</span> 
               </div>
               <span className="h-10 w-10 overflow-hidden rounded-full border-2 border-gray-200 group-hover:border-purple-400 transition-colors duration-200">
-                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="user profile" className="h-full w-full object-cover"/>
+                <img src="#" alt="user profile" className="h-full w-full object-cover"/>
               </span>
             </button>
             
